@@ -1,10 +1,9 @@
-/**
- *  自定义网站配置 
+/*  本项目为基于cf-worker-dir(https://github.com/sleepwood/CF-Worker-Dir)的自制Demo，添加了很多常用网站
  */
 const config = {
-  title: "自定义导航",                 //write your website title
-  subtitle: "Cloudflare Workers Dir", //write your website subtitle
-  logo_icon: "sitemap",               //select your logo by semantic-ui icon (you can get more msg in:https://semantic-ui.com/elements/icon.html)
+  title: "Creeper导航",                 //write your website title
+  subtitle: "基于Cloudflare Workers", //write your website subtitle
+  logo_icon: "globe",               //select your logo by semantic-ui icon (you can get more msg in:https://semantic-ui.com/elements/icon.html)
   hitokoto: true,                     //use hitokoto or not
   search:true,                        //enable search function
   search_engine:[                     //choose search engine which you use
@@ -13,22 +12,19 @@ const config = {
       template:"https://www.baidu.com/s?wd=$s"
     },
     {
-      name:"谷 歌",
+      name:"Google",
       template:"https://www.google.com/search?q=$s"
     },
     {
-      name:"必 应",
+      name:"Bing",
       template:"https://www.bing.com/search?q=$s"
     },
-    {
-      name:"搜 狗",
-      template:"https://www.sogou.com/web?query=$s"
-    }
+    
   ],
-  selling_ads: true,                  //Selling your domain or not.(turning on may be helpful for selling this domain by showing some ads.)
+  selling_ads: false,                  //Selling your domain or not.(turning on may be helpful for selling this domain by showing some ads.)
   sell_info:{
-    domain:"example.com",
-    price:500,                        //domain price
+    domain:"mcgenshin.ga",
+    price:999999,                        //domain price
     mon_unit:"yen sign",              //monetary unit 
     contact:[                         //how to contact you
       {
@@ -39,55 +35,299 @@ const config = {
   },
   lists: [                            //Url list
     {
-      name:"技术",
-      icon:"code",
+      name:"视频",
+      icon:"video",
       list:[
         {
-          url:"https://oschina.net/",
-          name:"开源中国",
-          desc:"程序员集散地"
+          url:"https://bilibili.com/",
+          name:"B站",
+          desc:"哔哩哔哩 (゜-゜)つロ 干杯~"
         },
         {
-          url:"https://v2ex.com",
-          name:"V2EX",
-          desc:"程序员集散地"
+          url:"https://youtube.com",
+          name:"油管",
+          desc:"YouTube"
         },
         {
-          url:"https://csdn.net/",
-          name:"CSDN技术社区",
-          desc:"程序员集散地"
-        },
-        {
-          url:"https://github.com/",
-          name:"Github",
-          desc:"程序员集散地"
-        },
+          url:"https://www.acfun.cn/",
+          name:"A站",
+          desc:"ACFun"
+        }
       ]
     },
     {
-      name:"学习",
-      icon:"graduation cap",
+      name:"二次元",
+      icon:"venus mars icon",
       list:[
         {
           url:"https://w3school.com.cn/",
-          name:"W3school在线教程",
+          name:"P站",
+          desc:"插画交流网站"
+        },
+        {
+          url:"https://bowlroll.net/",
+          name:"B碗",
+          desc:"bowlroll"
+        },
+        {
+          url:"https://www.deviantart.com/",
+          name:"D站",
+          desc:"deviantart"
+        },
+        {
+          url:"https://www.aplaybox.com/",
+          name:"模之屋",
+          desc:"国内专业MMD社区"
+        },
+        {
+          url:"https://make.girls.moe",
+          name:"二次元头像生成器",
+          desc:"AI绘画"
+        }
+      ]
+    },
+     {
+      name:"技术",
+      icon:"cogs",
+      list:[
+        {
+          url:"https://github.com",
+          name:"Github",
           desc:"程序员集散地"
         },
         {
-          url:"https://runoob.com/",
-          name:"菜鸟教程",
-          desc:"程序员集散地"
+          url:"https://github.com.cnpmjs.org",
+          name:"GitHub镜像网站",
+          desc:"访问较快，更稳定"
         },
         {
-          url:"https://segmentfault.com/",
-          name:"思否社区",
-          desc:"程序员集散地"
+          url:"https://www.cnblogs.com",
+          name:"博客园",
+          desc:"开发者的网上家园"
         },
         {
-          url:"https://jianshu.com/",
-          name:"简书",
-          desc:"程序员集散地"
+          url:"https://www.csdn.net/",
+          name:"CSDN",
+          desc:"专业开发者社区"
+        }
+      ]
+    },
+    {
+      name:"代码",
+      icon:"code icon",
+      list:[
+        {
+          url:"https://docs.microsoft.com/",
+          name:"Microsoft Docs",
+          desc:"微软官方文档"
         },
+        {
+          url:"https://s.threatbook.cn/",
+          name:"微步云沙箱",
+          desc:"在线查毒"
+        },
+        {
+          url:"https://www.virustotal.com/gui/home/url",
+          name:"VirusTotal",
+          desc:"检测可疑文件和 URL"
+        },
+        {
+          url:"https://www.58html.com/html/",
+          name:"58HTML",
+          desc:"HTML可视化编辑"
+        }
+      ]
+    },
+     {
+      name:"游戏",
+      icon:"gamepad icon",
+      list:[
+        {
+          url:"https://minecraft.fandom.com/zh/wiki/Minecraft_Wiki",
+          name:"Minecraft Wiki",
+          desc:"最详细的我的世界官方百科"
+        },
+        {
+          url:"https://bbs.mihoyo.com/",
+          name:"米游社",
+          desc:"技术宅拯救世界"
+        },
+        {
+          url:"https://store.steampowered.com/",
+          name:"Steam",
+          desc:"全球最大的综合性数字发行平台之一"
+        },
+        {
+          url:"https://www.epicgames.com/",
+          name:"Epic Games",
+          desc:"游戏平台的后起之秀"
+        },
+        {
+          url:"https://www.mcbbs.net/",
+          name:"MCBBS",
+          desc:"最大的我的世界中文论坛"
+        }
+      ]
+    },
+     {
+      name:"工具",
+      icon:"pencil alternate",
+      list:[
+        {
+          url:"https://www.aconvert.com/",
+          name:"Aconvert",
+          desc:"在线格式转换"
+        },
+        {
+          url:"https://www.torrentsafe.com/",
+          name:"TorrentSafe",
+          desc:"下载转存"
+        },
+        {
+          url:"https://fanyi.baidu.com/",
+          name:"百度翻译",
+          desc:"在线翻译系统"
+        },
+        {
+          url:"https://markdown.lovejade.cn/?utm_source=jeffjade.com",
+          name:"Arya",
+          desc:"在线Markdown编辑器"
+        },
+        {
+          url:"https://3g.gljlw.com/music/wy/",
+          name:"网易云音乐下载链接提取",
+          desc:"提取无损音乐"
+        }
+      ]
+    },
+         {
+      name:"邮箱",
+      icon:"envelope open",
+      list:[
+        {
+          url:"https://126.com",
+          name:"126邮箱",
+          desc:"网易免费邮箱"
+        },
+        {
+          url:"https://outlook.live.com",
+          name:"Outlook",
+          desc:"来自微软的邮箱服务"
+        },
+        {
+          url:"https://mail.google.com",
+          name:"Gmail",
+          desc:"谷歌邮箱"
+        }
+      ]
+    },
+     {
+      name:"网盘",
+      icon:"cloud download",
+      list:[
+        {
+          url:"https://pan.baidu.com",
+          name:"百度网盘",
+          desc:"带你体验二十年前的速度"
+        },
+        {
+          url:"https://onedrive.live.com",
+          name:"Onedrive",
+          desc:"基本打不开"
+        },
+        {
+          url:"https://lanzoui.com/",
+          name:"蓝奏云",
+          desc:"较为良心"
+        },
+        {
+          url:"https://cloud.189.cn",
+          name:"天翼云盘",
+          desc:"中国电信旗下产品"
+        }
+      ]
+    },
+           {
+      name:"邮箱",
+      icon:"envelope open",
+      list:[
+        {
+          url:"https://126.com",
+          name:"126邮箱",
+          desc:"网易免费邮箱"
+        },
+        {
+          url:"https://outlook.live.com",
+          name:"Outlook",
+          desc:"来自微软的邮箱服务"
+        },
+        {
+          url:"https://mail.google.com",
+          name:"Gmail",
+          desc:"谷歌邮箱"
+        }
+      ]
+    },
+     {
+      name:"音乐•艺术",
+      icon:"music",
+      list:[
+        {
+          url:"https://music.163.com/",
+          name:"网易云音乐",
+          desc:"享受音乐"
+        },
+        {
+          url:"https://www.grabient.com/",
+          name:"Grabient",
+          desc:"唯美渐变配色"
+        },
+        {
+          url:"https://www.thingiverse.com/",
+          name:"T站",
+          desc:"3D模型分享"
+        },
+        {
+          url:"https://github.com/yurui997/pix2pix-keras",
+          name:"Pix2Pix-Keras",
+          desc:"动漫图片AI上色"
+        }
+      ]
+    },
+     {
+      name:"放松",
+      icon:"smile outline",
+      list:[
+        {
+          url:"https:/www.webhek.com/post/draw-a-stickman.htm",
+          name:"画一个小人",
+          desc:"有趣的冒险"
+        },
+        {
+          url:"https://www.pixelthoughts.co/",
+          name:"60秒冥想",
+          desc:"放松身心"
+        },
+        {
+          url:"https://hackertyper.net/",
+          name:"HackerTyper",
+          desc:"假装黑客"
+        },
+        {
+          url:"https://codepen.io/akm2/full/rHIsa",
+          name:"Gravity Points",
+          desc:"体验重力的乐趣"
+        },
+        {
+          url:"http://magickeyboard.io/",
+          name:"打字游戏",
+          desc:"释放你的压力"
+        },
+        {
+          url:"https:/cts.chazhi.net/",
+          name:"藏头诗生成器",
+          desc:"快速生成藏头诗"
+        }
       ]
     }
   ]
@@ -190,7 +430,7 @@ function renderHTML(index,seller) {
   <body>
     ${index}
     ${config.selling_ads ? seller : ''}
-    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+    <script src="https://v1.hitokoto.cn/?c=a&c=b&c=c&c=j&encode=js&select=%23hitokoto" defer></script>
     <script>
       $('#sengine a').on('click', function (e) {
         $('#sengine a.active').toggleClass('active');
@@ -214,6 +454,5 @@ function renderHTML(index,seller) {
       });
     </script>
   </body>
-
   </html>`
 }
